@@ -135,8 +135,8 @@ article a:hover {
 }
 
 .map {
-  width: 35%;
-  height: auto;
+  width: 17rem;
+  height: 17rem;
   padding-left: 5rem;
   padding-bottom: 3rem;
   align-self: center;
@@ -390,5 +390,19 @@ footer {
     grid-template-columns: 1fr 0.02fr 1fr;
     grid-column-gap: 16px;
     align-items: center;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8.5rem;
+    margin-right: 8.5rem;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rem;
+    margin-right: 29rem;
   }
 }
