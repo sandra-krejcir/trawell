@@ -31,4 +31,62 @@ function viewDestinations(destination) {
   document.querySelector(
     ".map"
   ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imgcountrymap}`;
+  document.querySelector(
+    ".land1 img"
+  ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imglandmark1}`;
+  document.querySelector(
+    ".land1 img"
+  ).alt = `Picture of ${destination.landmarkname1}`;
+  document.querySelector(
+    ".land1 h4"
+  ).textContent = `${destination.attractiontype1} | ${destination.location1}`;
+  document.querySelector(".land1 h3").textContent = destination.landmarkname1;
+  document.querySelector(".land1 p").textContent =
+    destination.landmdescription1;
+  document.querySelector(
+    ".land2 img"
+  ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imglandmark2}`;
+  document.querySelector(
+    ".land2 img"
+  ).alt = `Picture of ${destination.landmarkname2}`;
+  document.querySelector(
+    ".land2 h4"
+  ).textContent = `${destination.attractiontype2} | ${destination.location2}`;
+  document.querySelector(".land2 h3").textContent = destination.landmarkname2;
+  document.querySelector(".land2 p").textContent =
+    destination.landmdescription2;
+  document.querySelector(
+    ".land3 img"
+  ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imglandmark3}`;
+  document.querySelector(
+    ".land3 img"
+  ).alt = `Picture of ${destination.landmarkname3}`;
+  document.querySelector(
+    ".land3 h4"
+  ).textContent = `${destination.attractiontype3} | ${destination.location3}`;
+  document.querySelector(".land3 h3").textContent = destination.landmarkname3;
+  document.querySelector(".land3 p").textContent =
+    destination.landmdescription3;
+  document.querySelector(
+    ".food1 img"
+  ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imgdish1}`;
+  document.querySelector(
+    ".food1 img"
+  ).alt = `Picture of ${destination.dishname1}`;
+  document.querySelector(".food1 figcaption").textContent =
+    destination.dish1imgattribution;
+  document.querySelector(".food1 h3").textContent = destination.dishname1;
+  document.querySelector(".food1 p").textContent = destination.dishdescription1;
+  document.querySelector(".food1 a").href = destination.recipe1;
+  document.querySelector(
+    ".food2 img"
+  ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imgdish2}`;
+  document.querySelector(
+    ".food2 img"
+  ).alt = `Picture of ${destination.dishname2}`;
+  document.querySelector(".food2 figcaption").textContent =
+    destination.dish1imgattribution;
+  document.querySelector(".food2 h3").textContent = destination.dishname2;
+  document.querySelector(".food2 p").textContent = destination.dishdescription2;
+  document.querySelector(".food2 a").href = destination.recipe2;
 }
