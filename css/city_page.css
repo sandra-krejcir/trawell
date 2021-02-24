@@ -1,0 +1,138 @@
+:root {
+  --color-1: #00373b;
+  --color-2: #10a3ac;
+  --color-3: #faa350;
+  --color-4: #000000;
+  --color-5: #737373;
+  --color-6: #ffffff;
+
+  --bg-color1: #ffffff;
+  --bg-color2: #fffaf6;
+  --bg-color3: #f5fafb;
+
+  --h1-font-family: "Mermaid Swash Caps", Georgia, serif;
+  --h2-font-family: "Work Sans SemiBold", Arial, sans-serif;
+  --h3-font-family: "Work Sans SemiBold", Arial, sans-serif;
+  --h4-font-family: "Work Sans SemiBold", Arial, sans-serif;
+  --p-font-family: "Work Sans Regular", Arial, sans-serif;
+  --button-font-family: "Work Sans SemiBold", Arial, sans-serif;
+
+  --button-color: #faa350;
+  --button-color-hover: #f27400;
+
+  --button-box-shadow: 0px 8px 16px 0px rgba(201, 114, 31, 0.2);
+  --button-box-shadow-hover: 0px 8px 16px 0px rgba(201, 114, 31, 0.4);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.background {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  height: 100px;
+}
+
+h1 {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+
+.description {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  column-gap: 10px;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.cityDes {
+  column-gap: 30rem;
+}
+
+.map {
+  width: 20rem;
+  height: 20rem;
+  padding-left: 5rem;
+  padding-bottom: 3rem;
+  align-self: center;
+}
+
+.flex_side {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+}
+
+.prices {
+  list-style: none;
+  column-count: 2;
+  column-gap: 5px;
+}
+.center {
+  text-align: center;
+}
+
+section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+button {
+  color: var(--color-6);
+  background-color: var(--button-color);
+  padding: 0.4rem;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: var(--button-box-shadow);
+  border: none;
+  margin-top: 2rem;
+}
+button :hover {
+  background-color: var(--button-box-shadow-hover);
+}
+.list {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  column-gap: 10px;
+  margin-left: 20rem;
+  margin-right: 19rem;
+}
+
+.list img {
+  width: 20rem;
+  height: 20rem;
+  padding: 0;
+}
+.list p {
+  max-width: 20rem;
+}
+
+article {
+  box-shadow: var(--button-box-shadow);
+  padding: 1rem;
+}
+
+article h3 {
+  text-align: center;
+}
+
+article h4 {
+  text-align: center;
+}
+
+article a {
+  align-self: center;
+}
