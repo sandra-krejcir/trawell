@@ -1,5 +1,5 @@
 const url =
-  "https://kea21s-6eb0.restdb.io/rest/trawell/6033c9b66afd463c000055c7";
+  "https://kea21s-6eb0.restdb.io/rest/trawell/6033d2ac6afd463c000056cf";
 
 const options = {
   headers: {
@@ -73,8 +73,13 @@ function viewDestinations(destination) {
   document.querySelector(
     ".food1 img"
   ).alt = `Picture of ${destination.dishname1}`;
-  document.querySelector(".food1 figcaption").textContent =
-    destination.dish1imgattribution;
+  if (destination.dish1attribution) {
+    document.querySelector(".food1 figcaption").textContent =
+      destination.dish1imgattribution;
+  } else {
+    document.querySelector(".food1 figcaption").textContent = "";
+    document.querySelector(".food1 h3").classList.add("space");
+  }
   document.querySelector(".food1 h3").textContent = destination.dishname1;
   document.querySelector(".food1 p").textContent = destination.dishdescription1;
   document.querySelector(".food1 a").href = destination.recipe1;
@@ -84,9 +89,36 @@ function viewDestinations(destination) {
   document.querySelector(
     ".food2 img"
   ).alt = `Picture of ${destination.dishname2}`;
-  document.querySelector(".food2 figcaption").textContent =
-    destination.dish1imgattribution;
+  if (destination.dish2attribution) {
+    document.querySelector(".food2 figcaption").textContent =
+      destination.dish2imgattribution;
+  } else {
+    document.querySelector(".food2 figcaption").textContent = "";
+    document.querySelector(".food2 h3").classList.add("space");
+  }
   document.querySelector(".food2 h3").textContent = destination.dishname2;
   document.querySelector(".food2 p").textContent = destination.dishdescription2;
   document.querySelector(".food2 a").href = destination.recipe2;
+  if (destination.dish3exist) {
+    document.querySelector(
+      ".food3 img"
+    ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imgdish3}`;
+    document.querySelector(
+      ".food3 img"
+    ).alt = `Picture of ${destination.dishname3}`;
+    if (destination.dish3attribution) {
+      document.querySelector(".food3 figcaption").textContent =
+        destination.dish3imgattribution;
+    } else {
+      document.querySelector(".food3 figcaption").textContent = "";
+      document.querySelector(".food3 h3").classList.add("space");
+    }
+    document.querySelector(".food3 h3").textContent = destination.dishname3;
+    document.querySelector(".food3 p").textContent =
+      destination.dishdescription3;
+    document.querySelector(".food3 a").href = destination.recipe3;
+  } else {
+    document.querySelector(".food3").classList.add("disappear");
+    document.querySelector(".dishes").classList.add("gap_space");
+  }
 }

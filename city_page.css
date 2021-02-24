@@ -202,9 +202,8 @@ button:hover {
   max-width: 20rem;
   padding-top: 0.5rem;
 }
-
 .landmark {
-  background-color: #f5fafb;
+  background-color: black;
 }
 
 article {
@@ -219,6 +218,17 @@ figcaption {
   font-size: 0.7rem;
 }
 
+.space {
+  margin-top: 1rem;
+}
+
+.disappear {
+  display: none;
+}
+
+.gap_space {
+  column-gap: 5rem;
+}
 html {
   scroll-behavior: smooth;
   font-size: 16px;
