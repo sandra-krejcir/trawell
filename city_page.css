@@ -101,6 +101,7 @@ h1 {
 
 h2 {
     font-family: var(--h2-font-family);
+    padding-top: 4rem;
 }
 
 h3 {
@@ -112,9 +113,11 @@ h3 {
 
 h4 {
     font-family: var(--h4-font-family);
-    color: #737373;
+    color: var(--color-1);
+    opacity: 0.8;
     text-align: center;
     padding-top: 0.8rem;
+    font-size: 0.8rem;
 }
 
 p {
@@ -138,7 +141,8 @@ article a:hover {
     column-gap: 10px;
     margin-left: 8.5rem;
     margin-right: 8.5rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
+    margin-bottom: 0;
 }
 
 .description p {
@@ -148,6 +152,7 @@ article a:hover {
 
 .description h2 {
     padding-bottom: 2rem;
+    padding-top: 1rem;
 }
 
 .cityDes {
@@ -157,7 +162,7 @@ article a:hover {
 .map {
     width: 35vw;
     height: 35vw;
-    padding-left: 5rem;
+    /* padding-left: 5rem; */
     padding-bottom: 3rem;
     align-self: center;
 }
@@ -183,7 +188,7 @@ article a:hover {
 
 section {
     margin-top: 2rem;
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
 }
 
 button {
@@ -225,14 +230,25 @@ button:hover {
 .list p {
     max-width: 20rem;
     padding-top: 0.7rem;
+    font-size: 0.9rem;
+    color: black;
+    opacity: 0.8;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
 }
 .landmark {
     background-color: black;
 }
 
 article {
-    box-shadow: 0px 8px 16px 0px rgba(125, 109, 148, 0.5);
+    box-shadow: 0px 5px 20px 5px rgba(0, 55, 59, 0.15);
     padding: 1rem;
+    background-color: white;
+}
+
+.dishes > article {
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
 figcaption {
@@ -255,10 +271,11 @@ figcaption {
 }
 
 .recipe {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
+    margin-bottom: 1rem;
 }
 html {
     scroll-behavior: smooth;
@@ -366,6 +383,10 @@ footer {
     height: 70px;
     border-top: 3px solid var(--color-2);
     width: 100vw;
+}
+
+.background-blue {
+    background-color: var(--bg-color3);
 }
 
 @media (max-width: 800px) {
