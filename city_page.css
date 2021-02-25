@@ -481,6 +481,10 @@ footer {
     h1 {
         font-size: 1.2rem;
     }
+
+    img.map {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {

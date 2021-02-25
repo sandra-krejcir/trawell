@@ -1,5 +1,6 @@
 const url =
-    "https://kea21s-6eb0.restdb.io/rest/trawell/6033f1316afd463c00006404";
+    "https://kea21s-6eb0.restdb.io/rest/trawell/6033f1316afd463c00006404"; //Murter
+// "https://kea21s-6eb0.restdb.io/rest/trawell/60343cd96afd463c00006a90"; //Warsaw
 
 const options = {
     headers: {
@@ -16,9 +17,26 @@ function viewDestinations(destination) {
     document.querySelector(
         "h1"
     ).textContent = `${destination.city} | ${destination.country}`;
-    document.querySelector(
-        ".background"
-    ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imgcitybigpc}`;
+
+    //for changing main img background by media query size
+
+    const mediaQuery = window.matchMedia("(min-width: 500px)");
+    function handleTabletChange(e) {
+        // Check if the media query is true
+        if (e.matches) {
+            document.querySelector(
+                ".background"
+            ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imgcitybigpc}`;
+        } else {
+            document.querySelector(
+                ".background"
+            ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imgcitybigmobile}`;
+        }
+    }
+
+    mediaQuery.addListener(handleTabletChange);
+    handleTabletChange(mediaQuery);
+
     document.querySelector(".city_name").textContent = destination.city;
     document.querySelector(".big_des").textContent =
         destination.citydescription;
@@ -28,10 +46,11 @@ function viewDestinations(destination) {
     document.querySelector(".coffee").textContent = destination.coffeeprice;
     document.querySelector(".beer").textContent = destination.beerprice;
     document.querySelector(".lunch").textContent = destination.lunchprice;
-    document.querySelector(".see_map").href = destination.maplocation;
     document.querySelector(
         ".map"
     ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imgcountrymap}`;
+    document.querySelector(".see_map").href = destination.maplocation;
+
     document.querySelector(
         ".land1 img"
     ).src = `https://kea21s-6eb0.restdb.io/media/${destination.imglandmark1}`;
