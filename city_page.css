@@ -79,8 +79,8 @@ h1 {
   font-family: "Mermaid";
   font-size: 2.5rem;
   position: absolute;
-  top: 30%;
-  left: 8%;
+  top: 27%;
+  left: 7%;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
@@ -137,6 +137,7 @@ article a:hover {
   column-gap: 10px;
   margin-left: 8.5rem;
   margin-right: 8.5rem;
+  margin-top: 6rem;
 }
 
 .description p {
@@ -200,6 +201,7 @@ button:hover {
   background-color: var(--button-color-hover);
   box-shadow: var(--button-box-shadow-hover);
 }
+
 .list {
   display: flex;
   justify-content: space-around;
