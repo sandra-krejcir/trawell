@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Work Sans Regular";
+  src: url("../fonts/WorkSans-Regular.ttf");
+}
+body {
+  font-family: "Work Sans Regular", Arial, sans-serif;
+  background-color: #fffaf6;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  text-align: center;
+  padding-bottom: 130px;
+  margin-left: 85px;
+  margin-right: 85px;
+}
+blockquote {
+  text-align: center;
+}
+
+#us {
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+#us img {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+figcaption {
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  #us {
+    display: grid;
+    height: auto;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    padding-bottom: 10px;
+  }
+}
