@@ -77,9 +77,9 @@ nav {
 
 h1 {
     font-family: "Mermaid";
-    font-size: 2.3rem;
+    font-size: 2vw;
     position: absolute;
-    top: 27%;
+    top: 120px;
     left: 7%;
     background: rgb(255, 255, 255);
     background: linear-gradient(
@@ -94,14 +94,15 @@ h1 {
     );
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     color: var(--color-1);
 }
 
 h2 {
     font-family: var(--h2-font-family);
     padding-top: 4rem;
+    color: var(--color-1);
 }
 
 h3 {
@@ -162,7 +163,7 @@ article a:hover {
 .map {
     width: 35vw;
     height: 35vw;
-    /* padding-left: 5rem; */
+    padding-left: 2rem;
     padding-bottom: 3rem;
     align-self: center;
 }
@@ -217,13 +218,17 @@ button:hover {
     justify-content: space-around;
     flex-direction: row;
     column-gap: 2rem;
-    margin-left: 30rem;
-    margin-right: 29rem;
+    /* margin-left: 30rem; */
+    /* margin-right: 29rem; */
+    /* width: 60vw; */
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .list img {
-    width: 17rem;
-    height: 17rem;
+    width: 20vw;
+    height: auto;
     padding: 0;
 }
 
@@ -236,6 +241,7 @@ button:hover {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding-bottom: 1rem;
+    line-height: 1.4;
 }
 .landmark {
     background-color: black;
@@ -340,9 +346,14 @@ a {
     width: auto;
 }
 
-ul {
-    margin-right: 3rem;
+#footer-icons li {
+    margin-right: 10px;
+    margin-left: 10px;
 }
+
+/* ul {
+    margin-right: 3rem;
+} */
 
 nav li {
     font-family: var(--h3-font-family);
@@ -389,6 +400,25 @@ footer {
     background-color: var(--bg-color3);
 }
 
+@media (max-width: 1260px) {
+    .list {
+        column-gap: 1rem;
+    }
+    .list img {
+        width: 23vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .description {
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+    .map {
+        align-self: end;
+    }
+}
+
 @media (max-width: 800px) {
     #global-nav {
         grid-area: global_nav;
@@ -423,12 +453,33 @@ footer {
         padding-right: 0;
     }
 
+    nav li {
+        padding-right: 0;
+    }
+
+    footer li {
+        padding-right: 0;
+    }
+
     .desktop {
         content-visibility: hidden;
     }
 
     .mobile {
         content-visibility: visible;
+    }
+
+    .list {
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .list img {
+        width: 40vw;
+    }
+
+    h1 {
+        font-size: 1.2rem;
     }
 }
 
@@ -442,7 +493,28 @@ footer {
         align-items: center;
     }
 
+    .list img {
+        width: 60vw;
+    }
+
+    .flex_side {
+        column-gap: 3rem;
+    }
+
     .description {
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    #footer-icons {
+        padding-top: 5%;
+    }
+
+    /* .description {
         display: flex;
         flex-direction: column;
         margin-left: 8.5rem;
@@ -454,5 +526,5 @@ footer {
         flex-direction: column;
         margin-left: 30rem;
         margin-right: 29rem;
-    }
+    } */
 }
