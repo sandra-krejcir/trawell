@@ -200,7 +200,7 @@ button:hover {
 
 .list p {
   max-width: 20rem;
-  padding-top: 0.5rem;
+  padding-top: 0.7rem;
 }
 .landmark {
   background-color: black;
@@ -228,6 +228,13 @@ figcaption {
 
 .gap_space {
   column-gap: 5rem;
+}
+
+.recipe {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
 }
 html {
   scroll-behavior: smooth;
