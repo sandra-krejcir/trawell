@@ -1,0 +1,143 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 50px 40px auto 50px;
+    background-color: var(--bg-color2);
+}
+
+.items {
+    grid-area: items;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgba(110, 54, 0, 0.15);
+}
+
+#filter {
+    grid-area: filter;
+    align-self: center;
+    border-bottom: #cccccc solid 1px;
+}
+
+#filter > ul {
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+}
+
+#filter > ul > li {
+    margin: 0;
+    padding: 0;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    font-family: var(--p-font-family);
+    color: var(--color-4);
+    font-size: 1.1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.7rem;
+}
+
+#filter > ul > li > a {
+    color: #7f7f7f;
+}
+
+.selected {
+    border-bottom: var(--color-3) 3px solid;
+}
+
+.selected > a > img {
+    color: black;
+}
+
+.selected > a > span {
+    color: black;
+    font-family: var(--h2-font-family);
+}
+
+#boxes {
+    grid-area: boxes;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#flex-boxes {
+    display: flex;
+    place-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+h4 {
+    font-family: var(--h4-font-family);
+    color: var(--color-1);
+    opacity: 0.8;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+}
+
+h3 {
+    font-family: var(--h3-font-family);
+    color: rgb(16, 163, 172);
+    text-align: center;
+    padding-top: 1rem;
+}
+
+p {
+    font-family: var(--p-font-family);
+    max-width: 20rem;
+    padding-top: 0.7rem;
+    font-size: 0.9rem;
+    color: black;
+    opacity: 0.8;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
+    line-height: 1.4;
+}
+
+article a {
+    color: var(--button-color);
+    font-family: var(--p-font-family);
+    justify-self: center;
+
+    margin-top: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+article a:hover {
+    color: var(--button-color-hover);
+}
+
+.filter_item {
+    font-size: 14px;
+}
+
+#filter > ul > li > a > div > img.icon_gap {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+@media (max-width: 480px) {
+    main {
+        grid-template-columns: 5% auto 5%;
+    }
+}
